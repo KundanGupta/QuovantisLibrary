@@ -1,12 +1,10 @@
-angular.module('BookService', []).factory('Book', ['$http', function($http) {
+angular.module('BookService', []).factory('Book', function($http) {
+	
+	// Callback method for fetching data from server
 	return{
-		getBooks: function(){
-			$http.get('/Books').success(function(response){
-	    		console.log("I got the data I requested");
-	    		//scope.books = response;
-	    		//console.log("after: "+response);
-	    		return response;
-	    	});
+		getBooks: function(books){
+			$http.get('/Books').success(books);
 		}
 	};
-}]);
+	
+});

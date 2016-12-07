@@ -38,7 +38,9 @@ exports = module.exports = app; 						// expose app
 
 // CRUD Operation
 
+// Get all books from MongoDB
 app.get('/Books', function(req, res){
+	
 	console.log('I received a GET request');
 
 	db.Books.find(function (err, docs) {

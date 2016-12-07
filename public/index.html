@@ -27,22 +27,38 @@
 </head>
 <body ng-app="sampleApp" ng-controller="NerdController">
 <div class="container">
-	
-	<!-- HEADER -->
-	<nav class="navbar navbar-inverse">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Node and Angular</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a href="/nerds">Nerds</a></li>
-			<li><a href="/geeks">Geeks</a></li>
-			<li><a href="/books">Books</a></li>
-		</ul>
-	</nav>
+	<div class="row">
+		<!-- HEADER -->
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Home</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="/books">Books</a></li>
+				<li><a href="/nerds">History</a></li>
+				<li><a href="/geeks">Blog</a></li>
+			</ul>
+		</nav>
 
-	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
+		<!-- ANGULAR DYNAMIC CONTENT -->
+		<div ng-view></div>
 
+		<!-- Footer Section -->
+	    <footer>
+	        <div class="container">
+	            <div class="row">
+	                <article class="col-lg-12 col-md-12 col-sm-12">
+	                    <p>
+	                        <span>Quovantis</span> &copy; 
+	                        <em id="copyright-year">2016</em> | 
+	                        <a href="#">Privacy Policy</a>
+	                    </p>
+	                </article>
+	            </div>
+	        </div>
+	    </footer>
+	    <!-- Footer Section End -->
+	</div>
 </div>
 </body>
 </html>
